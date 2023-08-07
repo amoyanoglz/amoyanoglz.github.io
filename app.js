@@ -30,10 +30,10 @@ function crearBarra(id_barra){
 }
 
 // selecciono todas las barras generales par aluego manipularlas
-// let html = document.getElementById("html");
-// crearBarra(html);
-// let javascript = document.getElementById("javascript");
-// crearBarra(javascript);
+let html = document.getElementById("html");
+crearBarra(html);
+let javascript = document.getElementById("javascript");
+crearBarra(javascript);
 let wordpress = document.getElementById("wordpress");
 crearBarra(wordpress);
 let photoshop = document.getElementById("photoshop");
@@ -56,23 +56,23 @@ function efectoHabilidades(){
     var distancia_skills = window.innerHeight - habilidades.getBoundingClientRect().top;
     if(distancia_skills>=300 && entro==false){
         entro = true;
-        // const intervalHtml = setInterval(function(){
-        //     pintarBarra(html, 16, 0, intervalHtml);
-        // },100);
-        // const intervalJavascript = setInterval(function(){
-        //     pintarBarra(javascript, 11, 1, intervalJavascript);
-        // },100);
+        const intervalHtml = setInterval(function(){
+            pintarBarra(html, 11, 0, intervalHtml);
+        },100);
+        const intervalJavascript = setInterval(function(){
+            pintarBarra(javascript, 12, 1, intervalJavascript);
+        },100);
         const intervalWordpress = setInterval(function(){
-            pintarBarra(wordpress, 12, 2, intervalWordpress);
+            pintarBarra(wordpress, 10, 2, intervalWordpress);
         },100);
         const intervalPhotoshop = setInterval(function(){
             pintarBarra(photoshop, 10, 3, intervalPhotoshop);
         },100);
         const intervalPhp = setInterval(function(){
-            pintarBarra(php, 10, 4, intervalPhp);
+            pintarBarra(php, 11, 4, intervalPhp);
         },100);
         const intervalIlustrator = setInterval(function(){
-            pintarBarra(ilustrator, 11, 5, intervalIlustrator);
+            pintarBarra(ilustrator, 16, 5, intervalIlustrator);
         },100);
     }
 }
